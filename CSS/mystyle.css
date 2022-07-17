@@ -1,0 +1,81 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+h1{
+    text-align: center;
+    text-shadow: 1px 1px red;
+    text-decoration:underline;
+
+
+}
+#main{
+    width: 100%;
+    height:500px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+}
+#ball{
+    width:110px;
+    height:110px;
+    border-radius: 50%;
+    background-image: linear-gradient(to bottom,yellow 50%,green 50%);
+    animation: bounce 1s infinite linear;
+
+
+}
+#shadow{
+        width: 80px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: grey;
+        opacity: 0.8;
+        animation: shadow 1s infinite linear;
+    }
+
+p{
+    font-size: 30px;
+    text-shadow: 1px 1px grey;
+}
+.dot{
+    font-size: larger;
+    animation: dotsanimation 1s infinite linear;
+}
+@keyframes bounce {
+    0% {
+      transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+      transform: translateY(-150px) rotate(180deg);
+    }
+    100% {
+      transform: translateY(0px) rotate(360deg);
+    }
+}
+@keyframes shadow {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(0.5);
+      opacity: 0.3;
+    }
+    100% {
+      transform: scale(1);
+    }
+}
+@keyframes dotsanimation{
+    0%{
+        opacity: 1;
+    }
+    50%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
